@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<title>AIR JOBS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url(images/cleanHouse.jpg);
+    min-height: 100%;
+}
+.bar .button {
+    padding: 16px;
+}
+    
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+    
+<body>
+    
+    <!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar white card" id="myNavbar">
+    <a href="#home" class="bar-item button wide">AirJobs</a>
+    <!-- Right-sided navbar links -->
+    <div class="right hide-small">
+      <a href="#about" class="bar-item button">SOBRE</a>
+      <a href="#team" class="bar-item button"><i class="fa fa-user"></i> ENCONTRE UM CLEANER</a>
+      <a href="#work" class="bar-item button"><i class="fa fa-th"></i> SEJA UM CLEANER</a>
+      <a href="#pricing" class="bar-item button"><i class="fa fa-usd"></i> PREÇO</a>
+      <a href="#contact" class="bar-item button"><i class="fa fa-envelope"></i> CONTATO</a>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-flag"></i> OTHER LANGUAGES
+        </button>
+        <div class="dropdown-content">
+        <a href="index.html">ENGLISH</a>
+        <a href="#">ESPAÑOL</a>
+        <a href="#">FRANÇAIS</a>
+        <a href="#">ITALIANO</a>
+        </div>
+    
+    </div>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sb_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="sb_close()" class="bar-item button large padding-16">Fechar ×</a>
+  <a href="#about" onclick="sb_close()" class="bar-item button">SOBRE</a>
+  <a href="#team" onclick="sb_close()" class="bar-item button">ENCONTRE UM CLEANER</a>
+  <a href="#work" onclick="sb_close()" class="bar-item button">SEJA UM CLEANER</a>
+  <a href="#pricing" onclick="sb_close()" class="bar-item button">PREÇO</a>
+  <a href="#contact" onclick="sb_close()" class="bar-item button">CONTATO</a>
+  <div class="dropdown">
+        <button class="bar-item button"> OTHER LANGUAGES
+        </button>
+        <div class="dropdown-content">
+        <a href="index.html">ENGLISH</a>
+        <a href="#">ESPAÑOL</a>
+        <a href="#">FRANÇAIS</a>
+        <a href="#">ITALIANO</a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Header with full-height image -->
+<header class="bgimg-1 display-container grayscale-min" id="home">
+  <div class="display-left text-white" style="padding:48px">
+    <span class="jumbo hide-small">Encontre um cleaner para a sua residência</span><br>
+    <span class="xxlarge hide-large hide-medium">Encontre um cleaner para a sua residência</span><br>
+    <span class="large">Pare de perder o seu valioso tempo limpando sua residência de temporada.</span>
+    <p><a href="#about" class="button white padding-large large margin-top opacity hover-opacity-off">Saiba mais e comece hoje</a></p>
+  </div> 
+  <div class="display-bottomleft text-grey large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+      <i class="fa fa-instagram hover-opacity"></i>
+    <i class="fa fa-pinterest-p hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="container" style="padding:128px 16px" id="about">
+  <h3 class="center">SOBRE O AIR JOBS</h3>
+  <p class="center large">Seja o chefe ou o seu próprio chefe</p>
+  <div class="row-padding center" style="margin-top:64px">
+    <div class="quarter">
+      <i class="fa fa-desktop margin-bottom jumbo center"></i>
+      <p class="large">A maneira mais rápida de limpar o seu imóvel</p>
+      <p>Um clique e você vai encontrar o cleaner perfeito. Veja as suas qualificações, deixe um checklist se desejar.</p>
+    </div>
+    <div class="quarter">
+      <i class="fa fa-clock-o margin-bottom jumbo"></i>
+        <p class="large">Qualquer horário</p>
+        <p>Você pode agendar o dia e horário que sejam mais adequados às suas necessidades, pois você sabe que a limpeza da sua residência impõe o tom de qualidade e mostra aos seus hóspedes o quanto você se importa com eles.</p>
+      <p>.</p>
+    </div>
+    <div class="quarter">
+      <i class="fa fa-dollar margin-bottom jumbo"></i>
+      <p class="large">Ganhe dinheiro</p>
+      <p>Seja o seu próprio chefe. Trabalhe como cleaner quando você quiser. Ganhe mais dinheiro, tenha mais dinheiro na sua carteira ou o use para viajar o mundo.</p>
+    </div>  
+    <div class="quarter">
+      <i class="fa fa-cog margin-bottom jumbo"></i>
+      <p class="large">Suporte</p>
+      <p>Você pode contar conosco para solucionar os seus problemas de limpeza, como comprando produtos de limpeza, organizando a sua sala. Escolha a opção que funciona melhor para você.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section -->
+<div class="container light-grey" style="padding:128px 16px">
+  <div class="row-padding">
+ 
+
+<!-- Host Section -->
+<div class="container" style="padding:120px 16px" id="team">
+  <h3 class="center">ENCONTRE UM CLEANER</h3>
+  <p class="center large">Quando e onde você gostaria de uma limpeza?</p>
+<div class="container red">
+      <h2><i class="fa fa-home margin-right"></i>AGENDE UMA LIMPEZA</h2>
+    </div>
+    <div class="container white padding-16">
+      <form action="/action_page.php" target="_blank">
+        <div class="row-padding" style="margin:0 -16px;">
+          <div class="half margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Data de check in</label>
+            <form action="/action_page.php">
+                <input class="input border" type="date" name="CheckIn" required>
+            </form>
+              
+          </div>
+          <div class="half margin-bottom">
+            <label><i class="fa fa-clock-o"></i> Hora de entrada</label>
+              <form action="/action_page.php">
+                <input class="input border" type="time" name="CheckInH" required>
+             </form> 
+          </div>
+        </div>
+          
+          
+        <div class="row-padding" style="margin:8px -16px;">
+            <div class="half margin-bottom">
+            <label><i class="fa fa-clock-o"></i> Hora de saída</label>
+            <form action="/action_page.php">
+                <input class="input border" type="time" name="CheckOut" required>
+             </form>
+          </div>
+        </div>
+        
+        <button onclick="document.getElementById('id01').style.display='block'" class="button dark-grey" ><i class="fa fa-search margin-right"></i> Verifique a disponibilidade</button>
+        <p></p>
+
+        <div id="id01" class="modal">
+            <div class="modal-content">
+                <div class="container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+                    <form action="profileBR.html">
+                        <div class="containerR">
+                            <h1>Login</h1>
+                            <hr>
+
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Digite o email" name="email" required>
+
+                            <label for="psw"><b>Senha</b></label>
+                            <input type="password" placeholder="Digite a senha" name="psw" required>
+                
+                            <button type="submit" class="registerbtn">Entrar</button>
+                        </div>
+                    </form>
+      </div>
+    </div>
+  </div>             
+      </form>
+    </div>
+    </div>
+    </div>
+</div>
+    
+<!-- Work Section -->
+<div class="container" style="padding:128px 16px" id="work">
+  <h3 class="center">SEJA UM CLEANER</h3>
+  <p class="center large">Ganhe um dinheiro extra. Comece aqui!</p>
+
+
+    <form action="profileBR.html">
+  <div class="containerR">
+    <h1>Registro</h1>
+    <p>Preencha este formulário para criar uma conta.</p>
+    <hr>
+      
+      <form>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Digite o email" name="email" required>
+
+          <label for="psw"><b>Senha</b></label>
+          <input type="password" placeholder="Digite a senha" name="psw" required>
+
+          <label for="psw-repeat"><b>Repita a senha</b></label>
+        <input type="password" placeholder="Repita a senha" name="psw-repeat" required>
+      
+          <label for="fname"><b>Primerio nome</b></label>
+          <input type="text" placeholder="Digite o seu primeiro nome" name="fname" required>
+      
+          <label for="lname"><b>Último nome</b></label>
+          <input type="text" placeholder="Digite o seu sobrenome" name="lname" required>
+     
+          <label for="cep"><b>CEP</b></label>
+		  <input id="cep" type="text" placeholder="Digite o seu CEP" required/>
+          
+          <label for="logradouro"><b>Endereço</b></label>
+		  <input id="logradouro" type="text" placeholder="Digite o seu endereço" required/>
+          
+          <label for="numero" ><b>Número</b></label>
+		  <input id="numero" type="text" placeholder="Digite o número do seu endereço"/>
+          
+          <label for="complemento" ><b>Apartamento</b></label>
+		  <input id="complemento" type="text" placeholder="Digite o número do seu apartamento"/>
+          
+          <label for="bairro" ><b>Bairro</b></label>
+		  <input id="bairro" type="text" placeholder="Digite o seu bairro" required/>
+
+          <label for="cidade" ><b>Cidade</b></label>
+		  <input id="cidade" type="text" placeholder="Digite a cidade" required/>
+
+          <label for="estado"><b>Estado</b></label>
+          <p></p>
+		    <!--Make sure the form has the autocomplete function switched off:-->
+          <form autocomplete="off" action="/action_page.php">
+              <div class="autocomplete" style="width:100%;">
+                  <input type="text" id="myInputS" name="myState" placeholder="Digite o Estado" required>
+              </div>
+  
+          </form>
+
+          
+          <!--<label for="uf"><b>Estado</b></label>
+		    <select id="uf">
+			<option value="AC">Acre</option>
+			<option value="AL">Alagoas</option>
+			<option value="AP">Amapá</option>
+			<option value="AM">Amazonas</option>
+			<option value="BA">Bahia</option>
+			<option value="CE">Ceará</option>
+			<option value="DF">Distrito Federal</option>
+			<option value="ES">Espírito Santo</option>
+			<option value="GO">Goiás</option>
+			<option value="MA">Maranhão</option>
+			<option value="MT">Mato Grosso</option>
+			<option value="MS">Mato Grosso do Sul</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="PA">Pará</option>
+			<option value="PB">Paraíba</option>
+			<option value="PR">Paraná</option>
+			<option value="PE">Pernambuco</option>
+			<option value="PI">Piauí</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="RN">Rio Grande do Norte</option>
+			<option value="RS">Rio Grande do Sul</option>
+			<option value="RO">Rondônia</option>
+			<option value="RR">Roraima</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="SP">São Paulo</option>
+			<option value="SE">Sergipe</option>
+			<option value="TO">Tocantins</option>
+		</select> -->
+          
+          
+          <label for="pais"><b>País</b></label>
+		    <p></p>
+		    <!--Make sure the form has the autocomplete function switched off:-->
+          <form autocomplete="off" action="/action_page.php">
+              <div class="autocomplete" style="width:100%;">
+                  <input type="text" id="myInput" name="myCountry" placeholder="País" required>
+              </div>
+  
+          </form>
+        
+</form>    
+      
+    <label for="phone"><b>Telefone</b></label>
+    <input type="text" placeholder="Dígite o seu telefone com DDD" name="phone" required>
+      
+    <hr>
+    <p>Criando uma conta você concorda com os nossos <a href="#">Termos & Privacidade</a>.</p>
+
+    <button type="submit" class="registerbtn">Registrar</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Já tem uma conta?</p>
+      <button onclick="document.getElementById('id01').style.display='block'" class="button black">Entrar</button>
+      <p></p>
+
+  <div id="id01" class="modal">
+    <div class="modal-content">
+      <div class="container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+        <form action="profileBR.html">
+            <div class="containerR">
+                <h1>Login</h1>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Digite o email" name="email" required>
+
+                    <label for="psw"><b>Senha</b></label>
+                    <input type="password" placeholder="Digite a senha" name="psw" required>
+                
+                    <button type="submit" class="registerbtn">Entrar</button>
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+    </form>
+
+    
+</div>
+
+
+<!-- Pricing Section -->
+<div class="container center dark-grey" style="padding:128px 16px" id="pricing">
+  <h3>PREÇO</h3>
+  <p class="large">Escolha um plano que atenda às suas necessidades.</p>
+  <div class="row-padding" style="margin-top:64px">
+    <div class="third section">
+      <ul class="ul white hover-shadow">
+        <li class="black xlarge padding-32">Básico</li>
+        <li class="padding-16"><b>1 dia</b> de trabalho</li>
+        <li class="padding-16"><b>sem</b> produtos de limpeza</li>
+        <li class="padding-16"><b>até</b> 120 m²</li>
+        <li class="padding-16"><b>até</b> 2 banheiros</li>
+        <li class="padding-16">
+          <h2 class="wide">R$ 120</h2>
+          <span class="opacity">por dia</span>
+        </li>
+        <li class="light-grey padding-24">
+            <button onclick="document.getElementById('id01').style.display='block'" class="button black">Contratar</button>
+      <p></p>
+
+  <div id="id01" class="modal">
+    <div class="modal-content">
+      <div class="container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+        <form action="profileBR.html">
+            <div class="containerR">
+                <h1>Login</h1>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Digite o seu email" name="email" required>
+
+                    <label for="psw"><b>Senha</b></label>
+                    <input type="password" placeholder="Digite a sua senha" name="psw" required>
+                
+                    <button type="submit" class="registerbtn">Entrar</button>
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+        </li>
+      </ul>
+    </div>
+    <div class="third">
+      <ul class="ul white hover-shadow">
+        <li class="red xlarge padding-48">Pro</li>
+        <li class="padding-16"><b>5 dias</b> de trabalho</li>
+        <li class="padding-16"><b>sem</b> produtos de limpeza</li>
+        <li class="padding-16"><b>até</b> 120 m²</li>
+        <li class="padding-16"><b>até</b> 2 banheiros</li>
+        <li class="padding-16">
+          <h2 class="wide">R$ 110</h2>
+          <span class="opacity">por dia</span>
+        </li>
+        <li class="light-grey padding-24">
+            <button onclick="document.getElementById('id01').style.display='block'" class="button black">Contratar</button>
+      <p></p>
+
+  <div id="id01" class="modal">
+    <div class="modal-content">
+      <div class="container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+        <form action="profileBR.html">
+            <div class="containerR">
+                <h1>Login</h1>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Digite o email" name="email" required>
+
+                    <label for="psw"><b>Senha</b></label>
+                    <input type="password" placeholder="Digite a senha" name="psw" required>
+                
+                    <button type="submit" class="registerbtn">Entrar</button>
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+        </li>
+      </ul>
+    </div>
+    <div class="third section">
+      <ul class="ul white hover-shadow">
+        <li class="black xlarge padding-32">Básico + Produtos</li>
+        <li class="padding-16"><b>1 dia</b> de trabalho</li>
+        <li class="padding-16"><b>com</b> produtos de limpeza</li>
+        <li class="padding-16"><b>até</b> 120 m²</li>
+        <li class="padding-16"><b>até</b> 2 banheiros</li>
+        <li class="padding-16">
+          <h2 class="wide">R$ 130</h2>
+          <span class="opacity">por dia</span>
+        </li>
+        <li class="light-grey padding-24">
+          <button onclick="document.getElementById('id01').style.display='block'" class="button black">Contratar</button>
+      <p></p>
+
+  <div id="id01" class="modal">
+    <div class="modal-content">
+      <div class="container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+        <form action="profileBR.html">
+            <div class="containerR">
+                <h1>Login</h1>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Digite o email" name="email" required>
+
+                    <label for="psw"><b>Senha</b></label>
+                    <input type="password" placeholder="Digite a senha" name="psw" required>
+                
+                    <button type="submit" class="registerbtn">Entrar</button>
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<!-- Contact Section -->
+  <div class="padding-64 content text-grey" id="contact">
+    <h2 class="text-dark-grey">Contato</h2>
+    <hr style="width:200px" class="opacity">
+
+    <div class="section">
+      <p><i class="fa fa-map-marker fa-fw xxlarge margin-right"></i> São Paulo, BR</p>
+      <p><i class="fa fa-envelope fa-fw xxlarge margin-right"> </i> Email: airjobs@gmail.com</p>
+    </div><br>
+    <p>Mande-nos uma mensagem:</p>
+
+    <form action="profileBR.html" target="_blank">
+      <p><input class="input padding-16" type="text" placeholder="Nome" required name="Name"></p>
+      <p><input class="input padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="input padding-16" type="text" placeholder="Assunto" required name="Subject"></p>
+      <p><input class="input padding-16" type="text" placeholder="Mensagem" required name="Message"></p>
+      <p>
+        <button class="button light-grey padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+
+<!-- Footer -->
+<footer class="center black padding-64">
+  <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>Para o topo</a>
+  <div class="xlarge section">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-instagram hover-opacity"></i>
+    <i class="fa fa-pinterest-p hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+  </div>
+
+</footer>
+    
+<script type="text/javascript">
+          
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function sb_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function sb_close() {
+    mySidebar.style.display = "none";
+}
+               
+//ADDRESS AUTOCOMPLETE BY INSERTING THE ZIP CODE          
+	$("#cep").focusout(function(){
+		//Início do Comando AJAX
+		$.ajax({
+			//O campo URL diz o caminho de onde virá os dados
+			//É importante concatenar o valor digitado no CEP
+			url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+			//Aqui você deve preencher o tipo de dados que será lido,
+			//no caso, estamos lendo JSON.
+			dataType: 'json',
+			//SUCESS é referente a função que será executada caso
+			//ele consiga ler a fonte de dados com sucesso.
+			//O parâmetro dentro da função se refere ao nome da variável
+			//que você vai dar para ler esse objeto.
+			success: function(resposta){
+				//Agora basta definir os valores que você deseja preencher
+				//automaticamente nos campos acima.
+				$("#logradouro").val(resposta.logradouro);
+				$("#complemento").val(resposta.complemento);
+				$("#bairro").val(resposta.bairro);
+				$("#cidade").val(resposta.localidade);
+				$("#uf").val(resposta.uf);
+				//Vamos incluir para que o Número seja focado automaticamente
+				//melhorando a experiência do usuário
+				$("#numero").focus();
+			}
+		});
+	});
+          
+          
+          
+          
+          
+/* Autocomplete country*/
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+
+          
+          
+/*Autocomplete State*/          
+          
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the states names in Brazil:*/
+var countries = ["Acre","Alagoas","Amapá","Amazonas","Bahia","Ceará","Distrito Federal","Espírito Santo","Goiás","Maranhão","Mato Grosso","Mato Grosso do Sul","Minas Gerais","Pará","Paraíba","Paraná","Pernambuco","Piauí","Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul","Rondônia","Roraima","Santa Catarina","São Paulo","Sergipe","Tocantins", "Não se aplica"]
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInputS"), countries);
+</script>  
+</body>
+    
+</html>

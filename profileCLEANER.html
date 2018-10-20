@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">   
+<link rel="stylesheet" href="css/theme.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="css/monthly.css">
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
+    
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+
+/* Price buttons*/
+  
+.buttonG {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.buttonR {background-color: #f44336;} /* Red */ 
+.buttonB {background-color: #0b0b0b;} /* Black */
+    
+    
+    
+
+/*Calendar CSS */
+	
+
+		
+    .monthly {
+			box-shadow: 0 13px 40px rgba(0, 0, 0, 0.5);
+			font-size: 0.8em;
+		}
+		.desc {
+			max-width: 250px;
+			text-align: left;
+			font-size:14px;
+			padding-top:30px;
+			line-height: 1.4em;
+		}
+		.resize {
+			background: #222;
+			display: inline-block;
+			padding: 6px 15px;
+			border-radius: 22px;
+			font-size: 13px;
+		}
+		@media (max-height: 700px) {
+			.sticky {
+				position: relative;
+			}
+		}
+		@media (max-width: 600px) {
+			.resize {
+				display: none;
+			}
+		}    
+</style>
+<body class="theme-l5">
+
+<!-- Navbar -->
+<div class="top">
+ <div class="bar theme-d2 left-align large">
+  <a class="bar-item button hide-medium hide-large right padding-large hover-white large theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="bar-item button padding-large theme-d4"><i class="fa fa-home margin-right"></i>AirJobs</a>
+  <a href="profileEditCLEANER.html" class="bar-item button hide-small padding-large hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="#calendar" class="bar-item button hide-small padding-large hover-white" title="Calendar"><i class="fa fa-calendar"></i></a>
+  <a href="#messages" class="bar-item button hide-small padding-large hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+  <div class="dropdown-hover hide-small">
+    <button class="button padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="badge right small red">3</span></button>     
+    <div class="dropdown-content card-4 bar-block" style="width:300px">
+      <a href="#newFriend" class="bar-item button">One new friend request</a>
+      <a href="#messages" class="bar-item button">John Bill posted on your wall</a>
+      <a href="#messages" class="bar-item button">Jane likes your post</a>
+    </div>
+  </div>
+  <a href="#" class="bar-item button hide-small right padding-large hover-white" title="My Account">
+    <img src="images/avatar.jpg" class="circle" style="height:23px;width:23px" alt="Avatar">
+  </a>
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="bar-block theme-d2 hide hide-large hide-medium large">
+  <a href="#calendar" class="bar-item button padding-large">Calendar</a>
+  <a href="#messages" class="bar-item button padding-large">Messages</a>
+  <a href="profileEditCLEANER.html" class="bar-item button padding-large">My Profile</a>
+</div>
+
+<!-- Page Container -->
+<div class="container content" style="max-width:1400px;margin-top:80px" >    
+  <!-- The Grid -->
+  <div class="row">
+    <!-- Left Column -->
+    <div class="col m3">
+      <!-- Profile -->
+      <div class="card round white">
+          <a href="profileEditCLEANER.html" ><button type="button" class="text-theme margin-bottom right bEdit"><i class="fa fa-pencil-alt"></i>  Edit</button></a>
+        <div class="container">
+         <h4 class="center">My Profile</h4>
+         <p class="center"><img src="images/avatar.jpg" class="circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-user fa-fw margin-right text-theme"></i> Anne Brown</p>
+         <p><i class="fa fa-certificate fa-fw margin-right text-theme"></i> Designer, UI</p>
+         <p><i class="fa fa-home fa-fw margin-right text-theme"></i> 157, Colne Valley Av., London, UK</p>
+         <p><i class="fa fa-birthday-cake fa-fw margin-right text-theme"></i> April 1, 1988</p>        
+        </div>
+      </div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="card round" id="calendar">
+        <div class="white">
+            
+          <button onclick="myFunction('Demo1')" class="button block theme-l1 left-align"><i class="fa fa-circle-o-notch fa-fw margin-right"></i> Progress</button>
+          <div id="Demo1" class="hide container">
+            <p><b>4</b> hirings</p>
+            <p><b>3</b> schedules</p>
+               <p></p>
+              <br>
+              
+              <h6>Qualification:</h6>
+              <p><b>4,9</b><i class="fa fa-star fa-fw margin-right"></i></p>
+          </div>
+            
+          <button onclick="myFunction('Demo2')" class="button block theme-l1 left-align"><i class="fa fa-calendar-check-o fa-fw margin-right"></i> Calendar</button>
+          <div id="Demo2" class="hide container">
+            <div class="page">
+                <p>Event Calendar</p>
+		          <div style="width:100%; max-width:600px; display:inline-block;">
+			         <div class="monthly" id="mycalendar"></div>
+		          </div>
+            </div>
+		      <br><br>
+         </div>
+        
+          <button onclick="myFunction('Demo3')" class="button block theme-l1 left-align"><i class="fa fa-home fa-fw margin-right"></i>Announcements</button>
+          <div id="Demo3" class="hide container">
+              <a href="announcementshtml" ><button type="button" class="text-theme margin-bottom right bEdit"><i class="fa fa-pencil-alt"></i>  Edit</button></a>
+
+            <div class="row-padding">    
+            <br>
+                <div class="half">
+                    <img src="images/cleanHouse.jpg" style="width:100%" class="margin-bottom" onclick="document.getElementById('modal01').style.display='block'">
+                </div>  
+                <div class="half">
+                    <img src="images/beachHouse.jpeg" style="width:100%" class="margin-bottom">
+                </div>
+                <div class="half">
+                    <img src="images/studio.jpeg" style="width:100%" class="margin-bottom">
+                </div> 
+            </div>
+          </div>
+           <!-End announcements--> 
+            
+            <button onclick="myFunction('Demo4')" class="button block theme-l1 left-align"><i class="fa fa-dollar fa-fw margin-right"></i> Pricing</button>
+            <!-- Pricing Section -->
+            <div class="container center dark-grey" style="padding-left: 15px" id="pricing">
+            <h3>PRICING</h3>
+            <p class="large">Choose a pricing plan that fits your needs.</p>
+            <div style="margin-top:64px">
+                <div class="third">
+                    <ul class="ul white hover-shadow">
+                        <li class="black xlarge padding-32">Basic</li>
+                        <li class="padding-16"><b>4 hours</b> work</li>
+                        <li class="padding-16"><b>no</b> cleaning products</li>
+                        <li class="padding-16"><b>up to</b> 120 m²</li>
+                        <li class="padding-16"><b>up to</b> 2 bathrooms</li>
+                        <li class="padding-16">
+                        <h2 class="wide">US$ 20</h2>
+                            
+                        </li>  
+                        <p></p>   
+                    </ul>
+                </div>
+                <div class="third">
+                    <ul class="ul white hover-shadow">
+                        <li class="red xlarge padding-32">Pro</li>
+                        <li class="padding-16"><b>16 hours</b> work</li>
+                        
+                        <li class="padding-16"><b>no</b> cleaning products</li>
+                        <li class="padding-16"><b>up to</b> 120 m²</li>
+                        <li class="padding-16"><b>up to</b> 2 bathrooms</li>
+                        <li class="padding-16">
+                            <h2 class="wide">US$ 75</h2>
+                            
+                        </li>
+       
+                    </ul>
+                </div>
+                <div class="third">
+                    <ul class="ul white hover-shadow">
+                        <li class="black xlarge padding-32">Basic+</li>
+                        <li class="padding-16"><b>4 hours</b> work</li>
+                        <li class="padding-16"><b>with</b> cleaning products</li>
+                        <li class="padding-16"><b>up to</b> 120 m²</li>
+                        <li class="padding-16"><b>up to</b> 2 bathrooms</li>
+                        <li class="padding-16">
+                            <h2 class="wide">US$ 30</h2>
+                        </li>   
+                        <p></p>
+                     </ul>
+                </div> 
+                <p></p>
+                <span class="opacity">Note: minimum 4 hours work per day</span>
+                <p></p>
+            </div> 
+            </div>
+            
+          </div>
+        </div>
+        
+        
+        
+        <!-- Interests --> 
+      <div class="card round white hide-small">
+        <div class="container">
+          <p></p></div>
+        </div>   
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="col m7"> 
+      <div class="row-padding">
+        <div class="col m12">
+          <div class="card round white">
+            <div class="container padding">
+                <!-- Host Section -->
+                <div class="container" style="padding:120px 16px" id="team">
+                    <h3 class="center">FIND NEW JOBS</h3>
+                    <p class="center large">When and where would you like to work?</p>
+                    <!-- Hide and show-->
+                    <button id="myButton" onclick="myRegisterFunction()" class="button left"><img src="images/studio.jpeg" alt="Avatar" class="left margin-right circle" style="width:60px"> 8 hours job
+                    <p>Miami, FL</p></button>
+                    <p></p>
+       
+                    <div id="myRegister" style="display:none;" class="answer_list" >
+                    <br>
+                    <br>
+                        <br>
+                        <br>
+                    <!-- Content-->
+                    <div class="container black">
+                        <h2><img src="images/LogoFundoClaro.png" class="circle" width="10%">  CLEANING JOB</h2>
+                    </div>
+                    <div class="container white padding-16">
+                        <form action="/action_page.php" target="_blank">
+                            <div class="row-padding" style="margin:0 -16px;">
+                                <div class="half margin-bottom">
+                                    <label><i class="fa fa-calendar-o"></i> Check In Date</label>
+                                    <form action="/action_page.php">
+                                        <input class="input border" type="text" name="CheckIn" value="11/10/2018" required>
+                                    </form>
+              
+                                </div>
+                                <div class="half margin-bottom">
+                                    <label><i class="fa fa-clock-o"></i> Check In Hour</label>
+                                    <form action="/action_page.php">
+                                        <input class="input border" type="time" name="CheckInH" value="12:30" required>
+                                    </form> 
+                                </div>
+                                </div>
+          
+          
+                                <div class="row-padding" style="margin:8px -16px;">
+                                <div class="half margin-bottom">
+                                    <label><i class="fa fa-clock-o"></i> Check Out Hour</label>
+                                    <form action="/action_page.php">
+                                        <input class="input border" type="time" name="CheckOut" value="18:30" required>
+                                    </form>
+                                </div>
+                                    
+                                    
+                                </div>
+                            
+                            
+                            <label>Pricing: </label>
+                            <p></p>
+                            
+                            <button class="buttonG buttonB"type="radio" name="optradio" checked>Basic</button>
+                                                 
+                                
+                            <p></p>
+                            <br>
+                            <br>
+                            <label>House to be clean:</label>
+                            <p></p>
+                                                
+                            <hr class="clear">
+                            <div class="row-padding" style="margin:0 -16px">
+                                <div class="half">
+                                    <img src="images/studio.jpeg" style="width:100%" alt="Northern Lights" class="margin-bottom">
+                                </div>
+                                <div class="half">
+                                    <img src="images/studiolr.jpeg" style="width:100%" alt="Nature" class="margin-bottom">
+                                </div>
+                            </div>
+                            <div class="container">
+                                <h4><strong>The space</strong></h4>
+                                <div class="row large">
+                                    <div class="col s6">
+                                        <p><i class="fa fa-fw fa-male"></i> Max people: 2</p>
+                                        <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+                                        <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                                    </div>
+                                    <div class="col s6">
+                                        <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 12PM</p>
+                                        <p><i class="fa fa-fw fa-clock-o"></i> Check Out: Before 3PM</p>
+                                    </div>
+                                </div>
+                            <hr>
+    
+    
+    <h4><strong>Extra Info</strong></h4>
+    <p>Our apartment is really clean and we like to keep it that way.</p>
+    <p>Would you like to: 
+        <form action="/action_page.php">
+            <input type="checkbox" name="paymentCh" value="Change"> <i class="fas fa-broom large"></i> X <i class="fa fa-home large"></i> (to change cleaning per stay)
+            <br>
+            <input type="checkbox" name="paymentS" value="Clean"> <i class="fas fa-broom large"></i> X <i class="fa fa-dollar large"></i> (to change cleaning per money)
+
+        </form>
+    <hr>
+    
+              <h4><strong>Rules</strong></h4>
+              
+    <p><b>8 hours work</b>:</p>
+    <form action="/action_page.php">
+        <input type="checkbox" name="instr1" value="Vaccum" checked> Vacuum the house<br>
+        <input type="checkbox" name="instr2" value="Bathroom" checked> Clean the Bathroom (max. 2)<br>
+        <input type="checkbox" name="instr3" value="Table" checked> Clean the tables<br>
+        <input type="checkbox" name="instr4" value="Furniture" checked> Clean the furniture<br>
+        <input type="checkbox" name="instr5" value="Windows" checked> Clean the windows<br>
+        <input type="checkbox" name="instr6" value="Mirror" checked> Clean the mirrors<br>
+        <input type="checkbox" name="instr7" value="Towels" checked> Change towels and sheets<br>
+        <input type="checkbox" name="instr8" value="Towels" checked>Other instructions:<input type="text" name="other" value="Please send me a picture after cleaning. Thanks"> <br><br>
+    </form>   
+  </div>
+  <hr>
+                                <button onclick="document.getElementById('id01').style.display='block'" class="button dark-grey" ><i class="fa fa-thumbs-up margin-right"></i> Get the job</button>
+                                <p></p>
+                            
+                        </form>
+                </div>
+                <!-- End Content-->      
+                </div>
+                <!-- End Hide-->
+                </div>
+               <!-- End host section --> 
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        <div class="container card white round margin" id="messages"><br>
+            <h4>My messages:</h4>
+        </div>
+      
+      <div class="container card white round margin"><br>
+        <img src="images/avatar.jpg" alt="Avatar" class="left circle margin-right" style="width:60px">
+        <span class="right opacity">1 min</span>
+        <h4>Me<button type="button" class="button right margin-top"><i class="fa fa-star"></i> 4.5</button></h4><br>
+        <hr class="clear">
+        <p>I have disponibility to be your cleaner this day.</p>
+          <div class="row-padding" style="margin:0 -16px">      
+        </div>
+        <button type="button" class="button theme-d1 margin-bottom"><i class="fa fa-thumbs-up"></i> Accept</button> 
+         <button type="button" class="button theme-d1R margin-bottom"><i class="fa fa-thumbs-down"></i> Refuse</button> 
+            <input type="text" class="theme-d1" name="commented" value="Nice! I'll leave the keys there. Thanks"><br>
+        
+          <button onclick="myCommentFunction()" type="button" class="button theme-d2C margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+          <div id="myDIV">
+              <form action="/action_page.php">
+                  <input type="text" name="commented" ><br>
+                    <button onclick="myCommentFunction()" type="button" class="button theme-d2C margin-bottom"><i class="fa fa-comment"></i>  Submit</button>
+              </form>
+        </div>
+        <p></p>
+      </div>
+      
+      <div class="container card white round margin"><br>
+        <img src="images/avatar.jpg" alt="Avatar" class="left circle margin-right" style="width:60px">
+        <span class="right opacity">1 min</span>
+        <h4>Me<button type="button" class="button right margin-top"><i class="fa fa-star"></i> 3.7</button></h4><br>
+        <hr class="clear">
+        <p>I would like to be your cleaner this day.</p>
+          <div class="row-padding" style="margin:0 -16px">      
+        </div>
+        <button type="button" class="button theme-d1 margin-bottom"><i class="fa fa-thumbs-up"></i> Accept</button> 
+        <button type="button" class="button theme-d1R margin-bottom"><i class="fa fa-thumbs-down"></i> Refuse</button> 
+          <input type="text" class="theme-d1R" name="commented" value="Oh, I've already got another person =( Thanks anyway"><br>
+       <button onclick="myCommentFunction()" type="button" class="button theme-d2C margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+          <div id="myDIV2">
+              <form action="/action_page.php">
+                  <input type="text" name="commented" ><br>
+                    <button onclick="myCommentFunction()" type="button" class="button theme-d2C margin-bottom"><i class="fa fa-comment"></i>  Submit</button>
+              </form>
+        </div>
+        <p></p>
+      </div>
+      
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="col m2">
+      <div class="card round white center">
+        <div class="container">
+          <p>Upcoming Events:</p>
+          <img src="images/cleanHouse.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="button block theme-l4">Info</button></p>
+        </div>
+      </div>
+      <br>
+      
+      <div class="card round white center" id="newFriend">
+        <div class="container">
+          <p>Friend Request</p>
+          <img src="images/avatar.jpg" alt="Avatar" style="width:50%"><br>
+          <span>Jane Fonda</span>
+          <div class="row opacity">
+            <div class="half">
+              <button class="button block green section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="half">
+              <button class="button block red section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="card round white padding-16 center">
+        <p>ADS</p>
+      </div>
+      <br>
+      
+      <div class="card round white padding-32 center">
+        <p><i class="fa fa-star xxlarge"></i></p>
+      </div>
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="container theme-d3 padding-16">
+  <h5></h5>
+</footer>
+
+<footer class="container theme-d5">
+
+</footer>
+ 
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+        x.previousElementSibling.className += " theme-d1";
+    } else { 
+        x.className = x.className.replace("show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else { 
+        x.className = x.className.replace(" show", "");
+    }
+}
+    
+    
+//Calendar
+    
+    $(document).ready(function() {
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            defaultDate: '2016-09-12',
+            navLinks: true, // can click day/week names to navigate views
+            selectable: true,
+            selectHelper: true,
+            select: function(start, end) {
+                // Display the modal.
+                // You could fill in the start and end fields based on the parameters
+                $('.modal').modal('show');
+
+            },
+            eventClick: function(event, element) {
+                // Display the modal and set the values to the event values.
+                $('.modal').modal('show');
+                $('.modal').find('#title').val(event.title);
+                $('.modal').find('#starts-at').val(event.start);
+                $('.modal').find('#ends-at').val(event.end);
+
+            },
+            editable: true,
+            eventLimit: true // allow "more" link when too many events
+
+        });
+
+        // Bind the dates to datetimepicker.
+        // You should pass the options you need
+        $("#starts-at, #ends-at").datetimepicker();
+
+        // Whenever the user clicks on the "save" button om the dialog
+        $('#save-event').on('click', function() {
+            var title = $('#title').val();
+            if (title) {
+                var eventData = {
+                    title: title,
+                    start: $('#starts-at').val(),
+                    end: $('#ends-at').val()
+                };
+                $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+            }
+            $('#calendar').fullCalendar('unselect');
+
+            // Clear modal inputs
+            $('.modal').find('input').val('');
+
+            // hide modal
+            $('.modal').modal('hide');
+        });
+    });
+</script>
+    
+    <!-- JS ======================================================= -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/monthly.js"></script>
+<script type="text/javascript">
+	$(window).load( function() {
+
+		$('#mycalendar').monthly({
+			mode: 'event',
+			//jsonUrl: 'events.json',
+			//dataType: 'json'
+			xmlUrl: 'events.xml'
+		});
+
+		$('#mycalendar2').monthly({
+			mode: 'picker',
+			target: '#mytarget',
+			setWidth: '250px',
+			startHidden: true,
+			showTrigger: '#mytarget',
+			stylePast: true,
+			disablePast: true
+		});
+
+	switch(window.location.protocol) {
+	case 'http:':
+	case 'https:':
+	// running on a server, should be good.
+	break;
+	
+	}
+
+	});
+</script>
+    
+<script>
+function myCommentFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+    
+    
+  <script>
+function myEditProfileFunction() {
+    var x = document.getElementById("myProfile");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+      
+    
+    </script>
+  <!-- Hide Function-->  
+    <script>
+function myRegisterFunction() {
+    var x = document.getElementById("myRegister");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+    
+    <script>
+function ShowDiv() {
+    document.getElementById("myRegister").style.display = "";
+}</script>
+<!-- End Hide Function-->
+</body>
+</html> 
